@@ -1,0 +1,108 @@
+{
+  "info": {
+    "_postman_id": "ecf0c510-bc91-4b7e-86c0-4d67adf8797e",
+    "name": "Employee Shift Board",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Postman collection for Employee Shift Board Assignment"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"hire-me@anshumat.org\",\n  \"password\": \"HireMe@2025!\"\n}"
+        },
+        "url": {
+          "raw": "https://employeeshiftboard-1.onrender.com/api/login",
+          "protocol": "https",
+          "host": ["employeeshiftboard-1", "onrender", "com"],
+          "path": ["api", "login"]
+        }
+      },
+      "response": []
+    },
+
+    {
+      "name": "Get Employees (Admin Only)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }
+        ],
+        "url": {
+          "raw": "https://employeeshiftboard-1.onrender.com/api/employees",
+          "protocol": "https",
+          "host": ["employeeshiftboard-1", "onrender", "com"],
+          "path": ["api", "employees"]
+        }
+      },
+      "response": []
+    },
+
+    {
+      "name": "Create Shift (Admin Only)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"employeeId\": \"{{employeeId}}\",\n  \"date\": \"2025-12-15\",\n  \"startTime\": \"09:00\",\n  \"endTime\": \"17:00\"\n}"
+        },
+        "url": {
+          "raw": "https://employeeshiftboard-1.onrender.com/api/shifts",
+          "protocol": "https",
+          "host": ["employeeshiftboard-1", "onrender", "com"],
+          "path": ["api", "shifts"]
+        }
+      },
+      "response": []
+    },
+
+    {
+      "name": "Get Shifts (Admin/User)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }
+        ],
+        "url": {
+          "raw": "https://employeeshiftboard-1.onrender.com/api/shifts",
+          "protocol": "https",
+          "host": ["employeeshiftboard-1", "onrender", "com"],
+          "path": ["api", "shifts"]
+        }
+      },
+      "response": []
+    },
+
+    {
+      "name": "Delete Shift (Admin Only)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}", "type": "text" }
+        ],
+        "url": {
+          "raw": "https://employeeshiftboard-1.onrender.com/api/shifts/{{shiftId}}",
+          "protocol": "https",
+          "host": ["employeeshiftboard-1", "onrender", "com"],
+          "path": ["api", "shifts", "{{shiftId}}"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    { "key": "token", "value": "" },
+    { "key": "employeeId", "value": "" },
+    { "key": "shiftId", "value": "" }
+  ]
+}
