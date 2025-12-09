@@ -1,7 +1,7 @@
 import { useAuth } from "../context/AuthContext";
 import AdminShiftForm from "./AdminShiftForm";
 import ShiftsTable from "./ShiftsTable";
-import { Calendar, LayoutDashboard, LogOut, Sparkles } from "lucide-react";
+import { Calendar, LayoutDashboard, LogOut } from "lucide-react";
 
 export default function Dashboard() {
   const { user, logout } = useAuth();
@@ -12,8 +12,7 @@ export default function Dashboard() {
       <nav className="top-nav">
         <div className="nav-container">
           {/* Brand */}
-          <a href="/" className="nav-brand">
-            <Sparkles size={20} style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white' }} />
+          <a href="/" className="nav-brand" style={{ fontSize: '24px', fontWeight: 700 }}>
             ShiftBoard
           </a>
 

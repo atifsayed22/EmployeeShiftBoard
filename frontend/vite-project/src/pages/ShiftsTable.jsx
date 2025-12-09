@@ -65,7 +65,6 @@ export default function ShiftsTable() {
                 <th>Date</th>
                 <th>Start Time</th>
                 <th>End Time</th>
-                <th>Duration</th>
                 {user.role === "admin" && <th>Actions</th>}
               </tr>
             </thead>
@@ -74,7 +73,6 @@ export default function ShiftsTable() {
               {shifts.map((s) => {
                 const startDate = new Date(s.startAt);
                 const endDate = new Date(s.endAt);
-                const duration = Math.round((endDate - startDate) / (1000 * 60 * 60) * 10) / 10;
                 
                 return (
                   <tr key={s._id}>
@@ -92,9 +90,6 @@ export default function ShiftsTable() {
                       hour: "2-digit",
                       minute: "2-digit",
                     })}</td>
-                    <td>
-                      <span className="badge badge-neutral">{duration}h</span>
-                    </td>
 
                     {user.role === "admin" && (
                       <td>

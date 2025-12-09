@@ -2,7 +2,7 @@ import { useState } from "react";
 import api from "../api/apiInstance";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { LogIn, Sparkles, Mail, Lock } from "lucide-react";
+import { LogIn, Mail, Lock } from "lucide-react";
 
 export default function Login() {
   const { login } = useAuth();
@@ -32,32 +32,10 @@ export default function Login() {
   return (
     <div className="login-container">
       <div className="login-card">
-        {/* Logo/Brand Header */}
-        <div style={{ 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'center',
-          gap: '12px',
-          marginBottom: '32px'
-        }}>
-          <div style={{
-            width: '48px',
-            height: '48px',
-            background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
-            borderRadius: '14px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: '0 8px 20px rgba(99, 102, 241, 0.4)'
-          }}>
-            <Sparkles size={26} color="white" />
-          </div>
-          <h2 className="login-title" style={{ marginBottom: 0 }}>
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <h2 className="login-title" style={{ fontSize: '32px', marginBottom: '8px' }}>
             ShiftBoard
           </h2>
-        </div>
-
-        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
           <h3 style={{ 
             fontSize: '20px', 
             fontWeight: 600, 
