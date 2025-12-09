@@ -12,9 +12,10 @@ import shiftRoutes from "./routes/shiftRoutes.js";
 
 const app = express();
 app.use(cors({
-  origin: "https://employee-shift-board-git-main-sayedatif4321-1267s-projects.vercel.app/", 
+  origin: "https://employee-shift-board-git-main-sayedatif4321-1267s-projects.vercel.app",
   credentials: true,
 }));
+
 
 app.use(express.json());
 
