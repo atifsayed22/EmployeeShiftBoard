@@ -49,7 +49,7 @@ cd frontend/vite-project
 npm run dev
 ```
 
-5. **Open browser:** http://localhost:5173
+5. **Open browser:** https://employee-shift-board-git-main-sayedatif4321-1267s-projects.vercel.app/
 
 6. **Login** with admin credentials above
 

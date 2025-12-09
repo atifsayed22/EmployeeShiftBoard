@@ -29,7 +29,7 @@ JWT_SECRET=your_secret_key_here
 
 **Create `frontend/vite-project/.env`:**
 ```env
-VITE_API_URL=http://localhost:5000/api
+VITE_API_URL=https://employee-shift-board-git-main-sayedatif4321-1267s-projects.vercel.app/
 ```
 
 ### 3. Seed Database
@@ -50,18 +50,18 @@ This creates:
 cd server
 npm start
 ```
-Backend runs on: http://localhost:5000
+Backend runs on: http://employeeshiftboard-1.onrender.com/api
 
 **Terminal 2 - Frontend:**
 ```bash
 cd frontend/vite-project
 npm run dev
 ```
-Frontend runs on: http://localhost:5173
+Frontend runs on: https://employee-shift-board-git-main-sayedatif4321-1267s-projects.vercel.app/login
 
 ### 5. Test It
 
-1. Open http://localhost:5173
+1. Open https://employee-shift-board-git-main-sayedatif4321-1267s-projects.vercel.app/login
 2. Login with: `hire-me@anshumat.org` / `HireMe@2025!`
 3. Create a shift (must be 4+ hours)
 4. View shifts in the table
@@ -100,7 +100,7 @@ Frontend runs on: http://localhost:5173
 - Update `VITE_API_URL` in frontend `.env`
 
 **CORS errors?**
-- Backend already configured for localhost:5173
+- Backend already configured for (https://employee-shift-board-git-main-sayedatif4321-1267s-projects.vercel.app/login)
 - If using different port, update `server/app.js`
 
 ## Ready to Submit

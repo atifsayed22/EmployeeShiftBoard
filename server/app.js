@@ -12,7 +12,7 @@ import shiftRoutes from "./routes/shiftRoutes.js";
 
 const app = express();
 app.use(cors({
-  origin: "http://localhost:5173",  // your frontend
+  origin: "https://employee-shift-board-git-main-sayedatif4321-1267s-projects.vercel.app/", 
   credentials: true,
 }));
 
